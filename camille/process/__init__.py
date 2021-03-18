@@ -13,8 +13,10 @@ Available processors
 * :func:`~camille.process.low_pass`
 * :func:`~camille.process.high_pass`
 * :func:`~camille.process.band_pass`
-* :func:`~camille.process.mooring_fatigue`
+* :func:`~camille.process.fatigue`
 * :func:`~camille.process.rolling_median`
+* :func:`~camille.process.mooring_stress`
+* :func:`~camille.process.tubing_stress`
 """
 
 from .atm_stb import process as atm_stb
@@ -23,8 +25,10 @@ from .fft import process as fft
 from .pass_filter import low_pass
 from .pass_filter import high_pass
 from .pass_filter import band_pass
-from .mooring_fatigue import process as mooring_fatigue
+from .fatigue import process as fatigue
 from .rolling_median import process as rolling_median
+from .mooring_stress import process as mooring_stress
+from .tubing_stress import process as tubing_stress
 
 __all__ = [
     'atm_stb',
@@ -33,6 +37,8 @@ __all__ = [
     'low_pass',
     'high_pass',
     'band_pass',
-    'mooring_fatigue',
-    'rolling_median'
+    'fatigue',
+    'rolling_median',
+    'mooring_stress',
+    'tubing_stress'
 ]
