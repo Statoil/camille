@@ -201,7 +201,7 @@ def scenario(case,
              ref_shear=lambda windfield: approx(windfield.shear),
              ref_veer=lambda windfield: approx(windfield.veer)):
     @given(case)
-    @settings(deadline=None, print_blob=True)
+    @settings(deadline=None, print_blob=True, max_examples=10000)
     def test(args):
         dist, windfield, _, df = args
         processed = process_with_args(dist, df)
